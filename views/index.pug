@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  <br>
+  h1 People in Room
+  <br>
+  .container
+    each val in messages
+      .usercontent
+          p #{val.user}
+          p #{val.text}
+          p #{val.added}
