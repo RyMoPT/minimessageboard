@@ -94,6 +94,10 @@ body {
   background-color: #4dabf5;
 }
 
+.button2:hover {
+  background-color: #4dabf5;
+}
+
 .fa-pencil {
   font-size: 1rem;
   float: right;
@@ -138,6 +142,10 @@ button {
   background-color: #2196f3;
   color: #fff;
   border: none;
+
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 }
 
 button:hover {
