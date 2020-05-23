@@ -1,14 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  <br>
-  h1 People in Room
+  h1.header= title
   <br>
   .container
     each val in messages
       .usercontent
-          p #{val.user}
-          p #{val.text}
-          p #{val.added}
+          h2 #{val.user}
+          p.messagetext #{val.text}
+          p.datetext #{val.added}
+    a(href='/new' class='button') New Message
+      i.fa.fa-pencil 

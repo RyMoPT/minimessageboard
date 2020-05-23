@@ -1,13 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Lets try to add stuff
-    form(method='POST' action='/new')
-        div.form-group
-        label(for='name') Name:
-        input.nameinput(type='text', placeholder='first and last' name='nameinput')
-        <br>
-        label(for='message') Message:
-        input.message(type='text', placeholder='What would you like to say?' name='messageinput')
-        button.btn.btn-primary(type='submit') Submit
+  h1.header= title
+  .container
+    .contentinputs
+        form(method='POST' action='/new')
+            div.form-group
+            label(for='name') Name:
+            input.nameinput(type='text', name='nameinput' placeholder='Your name?')
+            <br>
+            label(for='message') Message:
+            textarea.message(type='text', placeholder='What would you like to say?' name='messageinput')
+            .buttonsDiv
+                a(href='/' class='button2') Go Back
+                button.btn.btn-primary(type='submit') Submit
